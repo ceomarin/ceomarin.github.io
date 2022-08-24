@@ -61,3 +61,22 @@ body{
     font-family: "Open Sans";
     line-height: 3;
 }
+
+/* experiencia */
+#experiencia div h1{
+    font-family: "Oswald";
+    font-size: 52px;
+}
+
+#experiencia i{
+    color: #2d0080;
+}
+
+#experiencia div:last-child article h4:first-child {
+    font-family: "Oswald";
+}
+
+#experiencia div:last-child article h4:last-child {
+    font-family: "Open Sans";
+    font-weight: 300;
+}
