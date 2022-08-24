@@ -1,5 +1,7 @@
-/* font-family: 'Open Sans', sans-serif;
-font-family: 'Oswald', sans-serif; */
+html{
+    scroll-behavior: auto !important;
+}
+
 body{
     font-family: Helvetica;
 }
@@ -20,7 +22,7 @@ body{
 
 /* hero section */
 #hero-section{
-    background-image: url("../img/bg_hero3.png");
+    background-image: url("../img/bg_hero.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -52,7 +54,7 @@ body{
 }
 
 #hero-section h1:last-child{
-    font-weight: 900;
+    font-weight: 400;
 }
 
 /* sobre-mi */
@@ -95,4 +97,18 @@ body{
 #contacto h1{
     font-family: "Oswald";
     font-size: 52px;
+}
+
+/* footer */
+#footer{
+    background-color: #2d0080;
+}
+
+#footer h1{
+    font-family: "Oswald";
+}
+
+#footer a{
+    color: white;
+    text-decoration: none;
 }
