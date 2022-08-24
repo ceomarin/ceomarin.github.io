@@ -80,3 +80,13 @@ body{
     font-family: "Open Sans";
     font-weight: 300;
 }
+
+/* trabajos */
+#trabajos{
+    background-color: #2d0080;
+    font-family: "Oswald";
+}
+
+#trabajos h1 {
+    font-size: 52px;
+}
