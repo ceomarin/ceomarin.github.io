@@ -1,2 +1,19 @@
 /* font-family: 'Open Sans', sans-serif;
 font-family: 'Oswald', sans-serif; */
+body{
+    font-family: Helvetica;
+}
+
+/* navbar */
+.navbar{
+    background-color: #2d0080;
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
+}
+
+.navbar-brand{
+    font-family: "Oswald";
+    font-size: 40px;
+    font-weight: 700;
+}
