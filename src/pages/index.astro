@@ -1,17 +1,43 @@
 ---
-
+import "../styles/global.css";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/700.css";
+import "@fontsource/fira-code/400.css";
+import Navbar from "../components/Navbar.astro";
+import SobreMi from "../components/SobreMi.astro";
+import Skills from "../components/Skills.astro";
+import Proyectos from "../components/Proyectos.astro";
+import Contacto from "../components/Contacto.astro";
 ---
 
-<html lang="en">
+<!doctype html>
+<html lang="es">
 	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mi Portfolio</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="bg-slate-950 text-slate-100 font-sans antialiased" style="font-family: 'Inter', sans-serif;">
+		<Navbar />
+		<!-- HERO -->
+		<section class="min-h-screen flex flex-col items-center justify-center px-6 text-center">
+			<span class="text-sm font-mono text-violet-400 mb-4 tracking-widest uppercase" style="font-family: 'Fira Code', monospace;">Disponible para proyectos</span>
+
+			<h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-indigo-400 via-violet-400 to-purple-400 bg-clip-text text-transparent leading-tight">
+				Hola, soy<br />César Marín
+			</h1>
+
+			<p class="text-xl text-slate-400 max-w-xl mb-10">Developer frontend apasionado por crear interfaces rápidas, bonitas y fáciles de usar.</p>
+
+			<div class="flex gap-4 flex-wrap justify-center">
+				<a href="#proyectos" class="px-6 py-3 rounded-lg bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 text-white font-semibold hover:opacity-90 transition-opacity">Ver proyectos</a>
+				<a href="#contacto" class="px-6 py-3 rounded-lg border border-slate-700 text-slate-300 font-semibold hover:border-violet-500 hover:text-white transition-colors">Contacto</a>
+			</div>
+		</section>
+
+		<SobreMi />
+		<Skills />
+		<Proyectos />
+		<Contacto />
 	</body>
 </html>

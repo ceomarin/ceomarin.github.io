@@ -1,0 +1,124 @@
+---
+const proyectos = [
+  {
+    titulo: 'Dashboard de Métricas',
+    descripcion: 'Panel de control para visualizar KPIs en tiempo real con gráficos interactivos y filtros dinámicos.',
+    tags: ['React', 'TypeScript', 'Tailwind'],
+    color: 'from-indigo-600 to-violet-600',
+    emoji: '📊',
+    demo: '#',
+    codigo: '#',
+  },
+  {
+    titulo: 'E-commerce Minimalista',
+    descripcion: 'Tienda online con carrito, filtros por categoría y checkout en un solo paso. Diseño limpio y veloz.',
+    tags: ['Astro', 'JavaScript', 'CSS'],
+    color: 'from-violet-600 to-purple-600',
+    emoji: '🛍️',
+    demo: '#',
+    codigo: '#',
+  },
+  {
+    titulo: 'App de Tareas',
+    descripcion: 'Gestor de tareas con drag & drop, etiquetas de color y sincronización en tiempo real.',
+    tags: ['React', 'Node.js', 'PostgreSQL'],
+    color: 'from-purple-600 to-indigo-600',
+    emoji: '✅',
+    demo: '#',
+    codigo: '#',
+  },
+  {
+    titulo: 'API REST de Usuarios',
+    descripcion: 'Backend con autenticación JWT, roles, refresh tokens y documentación con Swagger.',
+    tags: ['Node.js', 'Express', 'Docker'],
+    color: 'from-indigo-600 to-purple-600',
+    emoji: '🔌',
+    demo: '#',
+    codigo: '#',
+  },
+  {
+    titulo: 'Blog Técnico',
+    descripcion: 'Blog estático generado con Astro y contenido en Markdown. 100 en Lighthouse.',
+    tags: ['Astro', 'Markdown', 'Vercel'],
+    color: 'from-violet-600 to-indigo-600',
+    emoji: '✍️',
+    demo: '#',
+    codigo: '#',
+  },
+  {
+    titulo: 'CLI de Productividad',
+    descripcion: 'Herramienta de línea de comandos para gestionar proyectos, timers y notas rápidas.',
+    tags: ['Python', 'Click', 'SQLite'],
+    color: 'from-purple-600 to-violet-600',
+    emoji: '⚡',
+    demo: '#',
+    codigo: '#',
+  },
+]
+---
+
+<section id="proyectos" class="py-24 px-6">
+  <div class="max-w-5xl mx-auto">
+
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <span class="text-sm font-mono text-violet-400 tracking-widest uppercase"
+            style="font-family: 'Fira Code', monospace;">
+        Portafolio
+      </span>
+      <h2 class="text-4xl font-bold mt-3 text-white">
+        Proyectos destacados
+      </h2>
+      <p class="text-slate-400 mt-4 max-w-lg mx-auto">
+        Una selección de lo que he construido. Cada proyecto
+        resuelve un problema real con código limpio.
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {proyectos.map(p => (
+        <div class="group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-violet-500/50 hover:-translate-y-1 transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/10 flex flex-col">
+
+          <!-- Imagen placeholder con gradiente -->
+          <div class={`h-40 bg-gradient-to-br ${p.color} flex items-center justify-center text-6xl`}>
+            {p.emoji}
+          </div>
+
+          <!-- Contenido -->
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="text-white font-semibold text-lg mb-2">
+              {p.titulo}
+            </h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-4 flex-1">
+              {p.descripcion}
+            </p>
+
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2 mb-5">
+              {p.tags.map(tag => (
+                <span class="text-xs px-2 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700">
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <!-- Links -->
+            <div class="flex gap-3">
+              <a href={p.demo}
+                 class="flex-1 text-center text-sm py-2 rounded-lg bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 text-white font-medium hover:opacity-90 transition-opacity">
+                Demo
+              </a>
+              <a href={p.codigo}
+                 class="flex-1 text-center text-sm py-2 rounded-lg border border-slate-700 text-slate-300 hover:border-violet-500 hover:text-white transition-colors">
+                Código
+              </a>
+            </div>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

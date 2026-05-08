@@ -1,0 +1,183 @@
+---
+const redes = [
+    {
+        nombre: "GitHub",
+        usuario: "@tunombre",
+        href: "https://github.com",
+        emoji: "🐙",
+        color: "hover:border-slate-400",
+    },
+    {
+        nombre: "LinkedIn",
+        usuario: "Tu Nombre",
+        href: "https://linkedin.com",
+        emoji: "💼",
+        color: "hover:border-indigo-400",
+    },
+    {
+        nombre: "Twitter / X",
+        usuario: "@tunombre",
+        href: "https://twitter.com",
+        emoji: "🐦",
+        color: "hover:border-violet-400",
+    },
+    {
+        nombre: "Email",
+        usuario: "tu@email.com",
+        href: "mailto:tu@email.com",
+        emoji: "✉️",
+        color: "hover:border-purple-400",
+    },
+];
+---
+
+<section id="contacto" class="py-24 px-6 bg-slate-900/40">
+    <div class="max-w-5xl mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-16">
+            <span
+                class="text-sm font-mono text-violet-400 tracking-widest uppercase"
+                style="font-family: 'Fira Code', monospace;"
+            >
+                Contacto
+            </span>
+            <h2 class="text-4xl font-bold mt-3 text-white">
+                Trabajemos juntos
+            </h2>
+            <p class="text-slate-400 mt-4 max-w-lg mx-auto">
+                Estoy disponible para proyectos freelance y posiciones
+                full-time. Escríbeme y te respondo en menos de 24h.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Redes sociales -->
+            <div>
+                <h3 class="text-white font-semibold mb-6 text-lg">
+                    Encuéntrame en
+                </h3>
+                <div class="flex flex-col gap-3">
+                    {
+                        redes.map((red) => (
+                            <a
+                                href={red.href}
+                                target="_blank"
+                                class={`flex items-center gap-4 p-4 bg-slate-900 border border-slate-800 rounded-xl transition-all duration-200 hover:-translate-x-1 ${red.color}`}
+                            >
+                                <span class="text-2xl">{red.emoji}</span>
+                                <div>
+                                    <p class="text-white font-medium">
+                                        {red.nombre}
+                                    </p>
+                                    <p class="text-slate-400 text-sm">
+                                        {red.usuario}
+                                    </p>
+                                </div>
+                                <span class="ml-auto text-slate-600">→</span>
+                            </a>
+                        ))
+                    }
+                </div>
+            </div>
+
+            <!-- Formulario -->
+            <div>
+                <h3 class="text-white font-semibold mb-6 text-lg">
+                    Envíame un mensaje
+                </h3>
+                <div class="flex flex-col gap-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="text-sm text-slate-400 mb-1.5 block"
+                                >Nombre</label
+                            >
+                            <input
+                                type="text"
+                                placeholder="Tu nombre"
+                                class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-white placeholder-slate-500 focus:outline-none focus:border-violet-500 transition-colors"
+                            />
+                        </div>
+                        <div>
+                            <label class="text-sm text-slate-400 mb-1.5 block"
+                                >Email</label
+                            >
+                            <input
+                                type="email"
+                                placeholder="tu@email.com"
+                                class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-white placeholder-slate-500 focus:outline-none focus:border-violet-500 transition-colors"
+                            />
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="text-sm text-slate-400 mb-1.5 block"
+                            >Asunto</label
+                        >
+                        <input
+                            type="text"
+                            placeholder="¿En qué puedo ayudarte?"
+                            class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-white placeholder-slate-500 focus:outline-none focus:border-violet-500 transition-colors"
+                        />
+                    </div>
+
+                    <div>
+                        <label class="text-sm text-slate-400 mb-1.5 block"
+                            >Mensaje</label
+                        >
+                        <textarea
+                            rows="4"
+                            placeholder="Cuéntame sobre tu proyecto..."
+                            class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-white placeholder-slate-500 focus:outline-none focus:border-violet-500 transition-colors resize-none"
+                        ></textarea>
+                    </div>
+
+                    <button
+                        class="w-full py-3 rounded-lg bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 text-white font-semibold hover:opacity-90 transition-opacity"
+                    >
+                        Enviar mensaje ✉️
+                    </button>
+
+                    <p class="text-xs text-slate-500 text-center">
+                        Este formulario es solo visual por ahora. Usa el email
+                        directo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-10 px-6 border-t border-slate-800">
+    <div
+        class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4"
+    >
+        <span
+            class="font-bold text-lg bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent"
+        >
+            tunombre.dev
+        </span>
+
+        <p class="text-slate-500 text-sm">
+            Construido con Astro + Tailwind CSS — {new Date().getFullYear()}
+        </p>
+
+        <div class="flex gap-6">
+            <a
+                href="#sobre-mi"
+                class="text-sm text-slate-500 hover:text-white transition-colors"
+                >Sobre mí</a
+            >
+            <a
+                href="#skills"
+                class="text-sm text-slate-500 hover:text-white transition-colors"
+                >Skills</a
+            >
+            <a
+                href="#proyectos"
+                class="text-sm text-slate-500 hover:text-white transition-colors"
+                >Proyectos</a
+            >
+        </div>
+    </div>
+</footer>

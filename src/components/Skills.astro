@@ -1,0 +1,113 @@
+---
+const categorias = [
+    {
+        nombre: "Automatización",
+        skills: [
+            { nombre: "Selenium", nivel: "experto", emoji: "🔬" },
+            { nombre: "Playwright", nivel: "intermedio", emoji: "🎭" },
+            { nombre: "TestNG", nivel: "experto", emoji: "🧪" },
+            //{ nombre: "Robot Framework", nivel: "aprendiendo", emoji: "🤖" },
+            { nombre: "Appium", nivel: "aprendiendo", emoji: "📱" },
+        ],
+    },
+    {
+        nombre: "Lenguajes",
+        skills: [
+            { nombre: "Java", nivel: "intermedio", emoji: "☕" },
+            { nombre: "JavaScript", nivel: "intermedio", emoji: "⚡" },
+            { nombre: "Python", nivel: "intermedio", emoji: "🐍" },
+            { nombre: "PostgreSQL", nivel: "intermedio", emoji: "🐘" },
+            { nombre: "REST APIs", nivel: "experto", emoji: "🔌" },
+            { nombre: "HTML & CSS", nivel: "experto", emoji: "🎨" },
+            { nombre: "TypeScript", nivel: "intermedio", emoji: "🔷" },
+            //{ nombre: "React", nivel: "intermedio", emoji: "⚛️" },
+            { nombre: "Astro", nivel: "aprendiendo", emoji: "🚀" },
+            { nombre: "Tailwind CSS", nivel: "intermedio", emoji: "💨" },
+        ],
+    },
+    {
+        nombre: "Herramientas",
+        skills: [
+            { nombre: "Jenkins", nivel: "experto", emoji: "⚙️" },
+            { nombre: "GitHub Actions", nivel: "intermedio", emoji: "🐙" },
+            { nombre: "Postman", nivel: "experto", emoji: "📮" },
+            { nombre: "SoapUI", nivel: "experto", emoji: "🧼" },
+            { nombre: "JIRA", nivel: "experto", emoji: "📋" },
+            { nombre: "Docker", nivel: "intermedio", emoji: "🐳" },
+            { nombre: "Git", nivel: "experto", emoji: "🌿" },
+            { nombre: "DBeaver", nivel: "experto", emoji: "🐦" },
+            { nombre: "IntelliJ", nivel: "experto", emoji: "💡" },
+            { nombre: "VS Code", nivel: "experto", emoji: "💻" },
+            { nombre: "Linux", nivel: "intermedio", emoji: "🐧" },
+        ],
+    },
+];
+
+const colores: Record<string, string> = {
+    experto: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+    intermedio: "bg-indigo-500/10  text-indigo-400  border-indigo-500/20",
+    aprendiendo: "bg-violet-500/10  text-violet-400  border-violet-500/20",
+};
+
+const puntos: Record<string, string> = {
+    experto: "bg-emerald-400",
+    intermedio: "bg-indigo-400",
+    aprendiendo: "bg-violet-400",
+};
+---
+
+<section id="skills" class="py-24 px-6 bg-slate-900/40">
+    <div class="max-w-5xl mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-16">
+            <span
+                class="text-sm font-mono text-violet-400 tracking-widest uppercase"
+                style="font-family: 'Fira Code', monospace;"
+            >
+                Tecnologías
+            </span>
+            <h2 class="text-4xl font-bold mt-3 text-white">Mi stack técnico</h2>
+            <p class="text-slate-400 mt-4 max-w-lg mx-auto">
+                Herramientas, frameworks y lenguajes con los que automatizo,
+                pruebo y entrego software de calidad a diario.
+            </p>
+        </div>
+
+        <!-- Leyenda -->
+        <div class="flex gap-6 justify-center mb-12 flex-wrap">
+            {
+                Object.entries(colores).map(([nivel]) => (
+                    <div class="flex items-center gap-2">
+                        <span class={`w-2 h-2 rounded-full ${puntos[nivel]}`} />
+                        <span class="text-sm text-slate-400 capitalize">
+                            {nivel}
+                        </span>
+                    </div>
+                ))
+            }
+        </div>
+
+        <!-- Categorías -->
+        <div class="grid md:grid-cols-3 gap-8">
+            {
+                categorias.map((cat) => (
+                    <div class="bg-slate-900 border border-slate-800 rounded-xl p-6">
+                        <h3 class="text-white font-semibold mb-5 text-lg">
+                            {cat.nombre}
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            {cat.skills.map((skill) => (
+                                <span
+                                    class={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-medium ${colores[skill.nivel]}`}
+                                >
+                                    <span>{skill.emoji}</span>
+                                    {skill.nombre}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>
