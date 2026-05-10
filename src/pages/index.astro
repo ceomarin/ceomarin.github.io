@@ -8,6 +8,7 @@ import SobreMi from "../components/SobreMi.astro";
 import Skills from "../components/Skills.astro";
 import Proyectos from "../components/Proyectos.astro";
 import Contacto from "../components/Contacto.astro";
+import WhatsAppButton from "../components/WhatsAppButton.astro";
 ---
 
 <!doctype html>
@@ -15,23 +16,47 @@ import Contacto from "../components/Contacto.astro";
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Mi Portfolio</title>
+		<link rel="icon" type="image/svg+xml" href="/ocho.svg" />
+		<title>ceomarin Mi Portfolio</title>
 	</head>
-	<body class="bg-slate-950 text-slate-100 font-sans antialiased" style="font-family: 'Inter', sans-serif;">
+	<body
+		class="bg-slate-950 text-slate-100 font-sans antialiased"
+		style="font-family: 'Inter', sans-serif;"
+	>
 		<Navbar />
 		<!-- HERO -->
-		<section class="min-h-screen flex flex-col items-center justify-center px-6 text-center">
-			<span class="text-sm font-mono text-violet-400 mb-4 tracking-widest uppercase" style="font-family: 'Fira Code', monospace;">Disponible para proyectos</span>
+		<section
+			class="min-h-screen flex flex-col items-center justify-center px-6 text-center"
+		>
+			<span
+				class="text-sm font-mono text-violet-400 mb-4 tracking-widest uppercase"
+				style="font-family: 'Fira Code', monospace;"
+				>Disponible para proyectos</span
+			>
 
-			<h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-indigo-400 via-violet-400 to-purple-400 bg-clip-text text-transparent leading-tight">
+			<h1
+				class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-indigo-400 via-violet-400 to-purple-400 bg-clip-text text-transparent leading-tight"
+			>
 				Hola, soy<br />César Marín
 			</h1>
 
-			<p class="text-xl text-slate-400 max-w-xl mb-10">Developer frontend apasionado por crear interfaces rápidas, bonitas y fáciles de usar.</p>
+			<p class="text-xl text-slate-400 max-w-xl mb-10">
+				Construyo sitios web para profesionales que quieren mostrarse al
+				mundo, y automatizo los procesos que les permiten enfocarse en
+				lo que realmente importa.
+			</p>
 
 			<div class="flex gap-4 flex-wrap justify-center">
-				<a href="#proyectos" class="px-6 py-3 rounded-lg bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 text-white font-semibold hover:opacity-90 transition-opacity">Ver proyectos</a>
-				<a href="#contacto" class="px-6 py-3 rounded-lg border border-slate-700 text-slate-300 font-semibold hover:border-violet-500 hover:text-white transition-colors">Contacto</a>
+				<a
+					href="#proyectos"
+					class="px-6 py-3 rounded-lg bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 text-white font-semibold hover:opacity-90 transition-opacity"
+					>Ver proyectos</a
+				>
+				<a
+					href="#contacto"
+					class="px-6 py-3 rounded-lg border border-slate-700 text-slate-300 font-semibold hover:border-violet-500 hover:text-white transition-colors"
+					>Contacto</a
+				>
 			</div>
 		</section>
 
@@ -39,5 +64,6 @@ import Contacto from "../components/Contacto.astro";
 		<Skills />
 		<Proyectos />
 		<Contacto />
+		<WhatsAppButton />
 	</body>
 </html>
